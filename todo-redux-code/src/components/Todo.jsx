@@ -16,9 +16,10 @@ function Todos() {
             key={todo.id}
           >
             <div className='text-white'>{todo.text}</div>
+            {/*if we dont fire a callback and use 'dispatch' function directly, it'll be fired as soon as the program
+            reaches this function. Hence we use a callback like done below*/}
+
             <button
-            //if we dont fire a callback and use 'dispatch' function directly, it'll be fired as soon as the program
-            //reaches this function. Hence we use a callback like done below
              onClick={() => dispatch(removeTodo(todo.id))}
               className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
             >

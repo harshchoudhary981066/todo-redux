@@ -5,13 +5,13 @@ import {addTodo} from '../features/todo/todoSlice'
 function AddTodo() {
 
     const [input, setInput] = useState('')
-    //This is the method to use dispatch
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) => {
         e.preventDefault()
         dispatch(addTodo(input))
         //This line is to clean the input field once it is sent to the store
+
         setInput('')
     }
 
@@ -34,4 +34,4 @@ function AddTodo() {
   )
 }
 
-export default addTodo
+export default AddTodo
